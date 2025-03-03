@@ -3,6 +3,7 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
+@app.route('/home', methods=['GET'])
 def landing_page():
     return render_template('index.html',name="index page", style='home.css')
 
